@@ -72,14 +72,30 @@ Boolean(0 && 1) // False
 8) Escreva um script que receba três valores A, B, C. Faça as comparações necessárias para exibir
 na tela o maior valor entre os três.
 Entrada:         Saída:
-10, 12, 2        O maior número é 12
+let valor1 = Number(prompt("Digite o 1° valor"))
+    let valor2 = Number(prompt("Digite o 2° valor"))
+    let valor3 = Number(prompt("Digite o 3° valor"))
 
-12, 2, 10        O maior número é 12
 
-2, 10, 12        O maior número é 12
+            if (valor1 > valor2 && valor1 > valor3) {
+                console.log(`O valor ${valor1} é o maior valor`)
+            }
+            else if (valor2 > valor1 && valor2 > valor3) {
+                    console.log(`O valor ${valor2} é o maior valor`)
+                    
+            }
+            else {
+                console.log(`O valor ${valor3} é o maior valor`)
+            }
+                console.log("Programa finalizado...")
 
 9) Reescreva o script abaixo utilizando o operador ternário:
 let resultado;
+
+let a = 1
+let b = 1
+
+console.log((a + b < 4) ? "Abaixo" : "Acima")
 
 if (a + b < 4) {
     resultado = "Abaixo"
@@ -93,19 +109,90 @@ escreva	se ele é Equilátero, Isósceles ou Escaleno.	Sendo que:
 − Triângulo	Isósceles: possui 2	lados iguais.	
 − Triângulo	Escaleno: possui 3 lados diferentes.
 
+let lado1 = Number(prompt("Digite a 1° medida do triangulo"))
+    let lado2 = Number(prompt("Digite a 2° medida do triangulo"))
+    let lado3 = Number(prompt("Digite a 3° medida do triangulo"))
+
+            if (lado1 === lado2 && lado1 === lado3) {
+                    console.log("O Triangulo é Equilátero")        
+            }
+            else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3){ 
+                console.log("O Triangulo é Escaleno")  
+            }
+           
+            else {
+                console.log("O Triangulo é Isosceles")
+            }
+                console.log("Programa finalizado...")
+
+
 11) Leia um numero fornecido pelo usuário. Se esse número for positivo, calcule a raiz
 quadrada do numero. Se o número for negativo, mostre uma mensagem dizendo que o
 numero é inválido.
 
+let numCond = Number(prompt("Digite um numero"))
+                if (numCond >= 0 ) {
+                    console.log(`${Math.sqrt(numCond)} `)
+                }
+                else {
+                    console.log(`O valor é Invalido`)
+                }
+                    console.log("Programa finalizado...")
+
+
 12) Leia um numero real. Se o numero for positivo imprima a raiz quadrada. Do contrário,
 imprima o numero ao quadrado.
+
+let condNum = Number(prompt("Digite um numero"))
+                if (numCond >= 0 ) {
+                    console.log(`${Math.sqrt(numCond)}`)
+                }
+                else {
+                    console.log(`${numCond**2}`)
+                }
+                    console.log("Programa finalizado...")
+
+
 
 13) Leia o salario de um trabalhador e o valor da prestação de um empréstimo. Se a prestaçao
 for maior que 20% do salário imprima: “empréstimo não concedido”, caso contrario imprima:
 “empréstimo concedido”.
 
+let salario = 1000
+let prest = 100
+                if ((prest/salario) > 0.2  ) {
+                    console.log("empréstimo não concedido")
+                }
+                else {
+                    console.log("empréstimo concedido")
+                }
+                    console.log("Programa finalizado...")
+
+
+
+
 14) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 7 e
 imprima o dia da semana correspondente a este numero. Isto é, domingo se for 1, segundafeira se for 2, e assim por diante.
+
+let x = 2
+
+switch (x){
+    case x = 1:
+   console.log("domingo")
+break;
+    case x = 2:
+   console.log("segunda")
+break;
+    case x = 3:
+   console.log("terça")
+break;
+    case x = 4:
+   console.log("quarta")
+}
+
+
+
+
 
 15) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 12 e
 imprima o mês correspondente a este numero. Isto é, Janeiro se for 1, Fevereiro se 2, e
