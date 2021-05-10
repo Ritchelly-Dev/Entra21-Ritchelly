@@ -8,31 +8,23 @@
 <body>
     <script>
 
-   /*Faça um script que receba como dados de entrada a altura e o sexo de uma pessoa 
-   (F – feminino ou M – masculino), utilizando a estrutura de seleção switch calcule
-    o peso ideal da pessoa com base nas fórmulas: 
-Homem: (72.7 * altura) - 58
-Mulher: (62.1 * altura) - 44.7
-Após isso apresente na tela o valor calculado arredondado para duas casas decimais.
-*/
+/*Crie um algoritmo que peça ao usuário um número e mostre na tela a tabuada (1 à 10) desse número.
+Entrada: */
 
-let altura = Number(prompt('Digite a altura Exemplo: 1.70'))
-let peso = Number(prompt('Digite o peso Exemplo: 90'))
-let imc = peso/(altura*altura)
+//let soma = 0 // Variável acumuladora
 
-if (imc > 30){
-    console.log(`IMC: ${imc}, pessoa considerada obesa`)
-}
-else if (imc < 30 && imc >= 25){
-    console.log(`IMC: ${imc}, pessoa considerada acima do peso`)
-} 
-else if(imc < 25 && imc >= 18,5){
-    console.log(`IMC: ${imc}, pessoa considerada peso normal`)
-}
-else{
-    console.log(`IMC: ${imc}, pessoa considerada abaixo do peso`)
-}
-console.log("Fim do programa")
+let soma = 0
+
+for (let i = 0; i <= 10; i++) {
+    num = Number(prompt("Digite um numero"))  
+            if (num < 0) {
+                soma++
+            }      
+
+            console.log(`${soma}`)
+        }
+        
+  
 
     </script>
     

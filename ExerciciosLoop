@@ -80,49 +80,61 @@ em 1000, mostrando seu valor na tela, ate que seu valor seja 100000 (cem mil).
 
 6) Faça um programa que peça ao usuario para digitar 5 valores. Ao final, mostre a soma desses
 valores e média desses valores (arredondado para duas casas decimais).
-Entrada:               Saída:
-9                      Soma: 26
-8                      Média: 5.20
-2
-3
-4
+
+let soma = 0 // Variável acumuladora
+let i = 0
+        while (i < 5) {
+            let valor = Number(prompt("Digite um número"))
+        i++
+            if (!valor) {
+                break
+            }
+
+            soma += valor
+            
+        }
+        let media = soma / 5
+        console.log(`Soma: ${soma}\n média ${media}`)
 
 
 7) Faça um programa que receba um número N e mostre na tela todos os números ímpares de 0
 até N. (Faça o teste de mesa)
-Entrada:                Saída:
-5                      1, 3, 5
--------------------------------------
-8                      1, 3, 5, 7
+let i = 0
+        while (i < 20) {   
+        i++          
+       
+        if(i % 2 != 0){
+
+            console.log (i)
+    }
+}
 
 
 8) Crie um algoritmo que peça ao usuário um número e mostre na tela a tabuada (1 à 10) desse número.
-Entrada:                Saída:
-2                       2 x 1 = 2
-                        2 x 2 = 4
-                        2 x 3 = 6
-                        2 x 4 = 8
-                        2 x 5 = 10
-                        2 x 6 = 12
-                        2 x 7 = 14
-                        2 x 8 = 16
-                        2 x 9 = 18
-                        2 x 10 = 20
+let num1 = Number(prompt("Digite um numero"))
+
+let num1 = Number(prompt("Digite um numero"))
+
+for (let i = 0; i <= 10; i++) {
+            if (i != 0) {
+            }
+            let resultado = i * num1
+            console.log(`${num1} * ${i} = ${resultado}`)
+        }
 
 
 9) Escreva um script que leia 5 valores do usuário e mostre quantos desses valores digitados são negativos.
-Entrada:                Saída:
-1                       2
--2
-3
--5
-4
-------------------------------
--2                      4
--7
--1
-2
--9
+
+let soma = 0
+
+for (let i = 0; i <= 10; i++) {
+    num = Number(prompt("Digite um numero"))  
+            if (num < 0) {
+                soma++
+            }      
+
+            console.log(`${soma}`)
+        }
 
 
 10) Elabore um  algoritmo que receba 10 números diferentes e mostre quantos são pares e quantos são ímpares.
