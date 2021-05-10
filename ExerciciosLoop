@@ -1,36 +1,81 @@
 1) Faça três scripts que mostrem a mensagem "Olá mundo!" 10 vezes na tela. Utilize uma estrutura
 de repetição diferente em cada um dos scripts (while, do-while, for).
 
+let i = 0
+        while (i < 10) {
+           console.log("Olá Mundo")
+           i++
+        }
+
+let i = 0
+        do {
+            console.log("Olá Mundo")
+            i++
+        } while (i < 10)
+
+ for (let i = 0; i < 10; i++) {
+            console.log("Olá Mundo")
+        }       
+
+
 
 2) Elabore três scripts que mostrem a mensagem "Estou aparecendo pela <numero_de_vezes> na tela!" 10 vezes. Substitua
 <numero_de_vezes> pela iteração atual do loop. Utilize uma estrutura de repetição diferente em cada um dos scripts
 (while, do-while, for).
 
+let i = 0
+        while (i < 10) {
+           console.log(`Estou aparecendo ${i} na tela`)
+           i++
+        }
+
+let b = 0
+        do {
+            console.log(`Estou aparecendo ${b} na tela`)
+            b++
+        } while (b < 10)
+
+ for (let x = 0; x < 10; x++) {
+    console.log(`Estou aparecendo ${x} na tela`)
+        }       
+
+
 
 3) Faça um algoritmo que mostra uma contagem regressiva na tela, iniciando em 10 e terminando em 0. Mostrar uma mensagem “FIM!” apos a contagem.
+
+let contador = 10;
+
+    while(contador >= 0) {
+
+        console.log(contador);
+        contador = contador - 1;
+
+        }
+
+    console.log("FIM");
+
 
 
 4) Faça um script utilizando o for, que permita ao usuário fazer três contas de subtração. 
 Para isso peça ao usuário dois números a cada iteração do loop e mostre na tela o resultado
 da operação. (Faça o teste de mesa)
-Entrada:                Saída:
-1                       1 - 2 = -1
-2                       4 - 3 = 1
-4                       9 - 5 = 4                       
-3
-9
-5
-----------------------------------
-10                      10 - 5 = 5
-5                       2 - 3 = -1
-2                       3 - 1 = 2
-3
-3
-1
+
+for(let i = 0; i < 3; i++ ){
+let valor1 = Number(prompt("digite um numero"))
+let valor2 = Number(prompt("digite um numero"))
+
+console.log(valor1-valor2)
+
+}
+
 
 
 5) Escreva um programa que declare uma váriavel numero, inicialize-a com 0, e incremente-a de 1000
 em 1000, mostrando seu valor na tela, ate que seu valor seja 100000 (cem mil).
+   
+   for(i = 0; i<=100000; i += 1000){
+            console.log(i)
+        }
 
 
 6) Faça um programa que peça ao usuario para digitar 5 valores. Ao final, mostre a soma desses

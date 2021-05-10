@@ -1,0 +1,97 @@
+
+3)
+let raio = 10     
+   const pi = 3.14159
+   let area = pi * (raio **2)
+       
+  console.log(`A área da circunferência de ${raio} é ${area}`)
+
+5)
+let nota1 = Number(prompt("Digite a primeira nota"))
+let nota2 = Number(prompt("Digite a segunda nota"))     
+let media = (nota1+nota2)/2
+   if(media >= 6) {
+console.log(`Aprovado com meédia ${media}`)
+   }
+     else{
+        console.log(`Reprovado com meédia ${media}`)
+     }  
+  console.log("Fim do Programa")
+
+6)
+let valor1 = Number(prompt("Digite o primeiro valor"))
+let valor2 = Number(prompt("Digite o segundo valor"))     
+   if(valor1 > valor2) {
+console.log(`O primeiro valor digitado ${valor1} é maior que o segundo valor digitado ${valor2}`)
+   }
+     else if(valor2 > valor1){
+        console.log(`O segundo valor digitado ${valor2} é maior que o primeiro valor digitado ${valor1}`)
+     }  
+     if(valor1 === valor2){
+     console.log(`O valor ${valor1} e o valor ${valor2} são iguais`)
+     }
+  console.log("Fim do Programa")
+
+7)
+let num1 = prompt('Digite um numero: ')
+let num2 = prompt('Digite outro numero: ')
+let num3 = prompt('Digite mais um numero: ')
+
+if(num1 > num2 && num1 > num3){
+    console.log(`O ${num1} é o maior!!`)
+}
+else if (num2 > num1 && num2 > num3){
+console.log(`O ${num2} é o maior!!`)
+}
+else {
+    console.log(`O ${num3} é o maior!!`)
+}
+console.log("fim do programa")
+
+
+
+8)
+let num1 = prompt('Digite um numero: ')
+
+if(num1 >= 20 && num1 <= 50){
+console.log(`O ${num1} esta no intervalos entre 20 e 50`)
+}
+else{
+console.log(`O ${num1} esta fora do intervalo`)
+}
+console.log("Fim do programa")
+
+
+9)
+let altura = Number(prompt('Digite a altura Exemplo: 1.70'))
+let sexo = prompt('Digite o sexo F – feminino ou M – masculino' )
+
+switch (sexo){
+    case "M":
+        console.log((72.10 * altura)-58)
+        break;
+    case "F":
+        console.log((61.2*altura)-44.7)
+        break;
+        default:
+        console.log("Não foram inseridas as informações necessárias")
+}
+
+10)
+let altura = Number(prompt('Digite a altura Exemplo: 1.70'))
+let peso = Number(prompt('Digite o peso Exemplo: 90'))
+let imc = peso/(altura*altura)
+
+if (imc > 30){
+    console.log(`IMC: ${imc}, pessoa considerada obesa`)
+}
+else if (imc < 30 && imc >= 25){
+    console.log(`IMC: ${imc}, pessoa considerada acima do peso`)
+} 
+else if(imc < 25 && imc >= 18,5){
+    console.log(`IMC: ${imc}, pessoa considerada peso normal`)
+}
+else{
+    console.log(`IMC: ${imc}, pessoa considerada abaixo do peso`)
+}
+console.log("Fim do programa")

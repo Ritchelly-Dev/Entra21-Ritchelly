@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+       //mostrar o nome na tela
+       console.log("O meu nome é Ritchelly")
+       alert("O meu nome é Ritchelly")
+
+       //Menu de cadastro de usuario
+       console.log("Cadastrar funcionário\nListar funcionários\nEditar funcionário\nDeletar funcionário\nSair")
+       
+       
+       //Declarar Variaveis e atribuir
+       let nome 
+       let admin
+            admin = nome
+
+        //script recebe e devolve informações
+        let usuario = prompt("Digite o seu nome")
+        let idade = prompt("Digite o seu idade")
+        let peso = prompt("Digite o seu peso")
+        let altura = prompt("Digite o seu altura")
+        let telefone = prompt("Digite o seu telefone")
+
+            console.log(`usuario ${usuario}\nidade ${idade}\npeso ${peso}\naltura ${altura}\ntelefone ${telefone}`)
+
+
+        //armazenando variaveis
+        let Titulo = "Pinoquio"
+        let Edição = "15"
+        let Autor = "Maria"
+        let dataPublicação = "10/05/2000"
+
+
+        console.log(`Título: ${Titulo}\nEdição: ${Edição}\nAutor: ${Autor}\nData de Publicação: ${dataPublicação}`)
+
+
+
+        //padrões de nomeação
+        let dataDeNascimento = "10/05/2001"
+        let qtdDeFilhoQuePossui = "5"
+        let usuarioLogado = "Pedro"
+
+       
+
+/*7) Qual é a saída de dados(output) do seguinte script:
+    let nome = "João"
+    console.log(`Olá ${1}`) // ?
+    console.log(`Olá ${"nome"}`) // ?
+    alert(`Olá ${nome}`) // ?
+
+
+    Resposta: Olá João
+
+
+
+8) Considerando o seguinte script:
+    let x = 10
+    let y = 8
+    let area = (x * y) / 2 + 3 ** 4
+    console.log(area)
+Qual é a saida de dados (output)?
+
+Resposta: 121
+
+
+
+9) Quais são os valores de a e x que serão exibidos no console
+let a = 2
+let x = 1 + (a *= 2)
+console.log(a, x)
+
+Resposta: 4 5
+
+10) Qual é o resultado de cada operação? 
+    A) "" + 1 + 0 // ?
+    10
+    B) "" - 1 + 0 // ?
+    -1
+    C) 6 / "3" // ?
+    2
+    D) "2" * "3" // ?
+    6
+    E) 4 + 5 + "px" // ?
+    9px
+    F) "$" + 4 + 5 // ?
+    $45
+    G) "4" - 2 // ?
+    2
+
+*/
+
+//Receber e devolver valores (calculo "tipo number")
+       let alturaQuadrado = Number(prompt("Altura do Quadrado"))
+       let larguraQuadrado = alturaQuadrado
+
+            console.log("Perimetro = " + 4 * alturaQuadrado )
+            console.log("Área = " + larguraQuadrado **2)
+
+          //Perimetro -->  P = L + L + L + L ou P = 4L
+          //Area --> A = L2 ou A = b.h
+
+
+//Receber dois valores e somalos
+        let valor_1 = Number(prompt("Primeiro Valor p/ soma"))
+        let valor_2 = Number(prompt("Segundo Valor p/ soma"))
+
+            console.log(`A soma de ${valor_1} com ${valor_2} = ${valor_1 + valor_2}`)
+
+
+//media entre dois valores
+        let nota_1 = Number(prompt("Primeira Nota"))
+        let nota_2 = Number(prompt("Segunda Nota"))
+
+            console.log("Nota " +(nota_1 + nota_2)/2)  
+
+//quadrado de numeros
+        let num_1 = Number(prompt("Primeiro Numero ²"))
+        let num_2 = Number(prompt("Segundo Numero ²"))
+        let num_3 = Number(prompt("Terceiro Numero ²"))
+
+            console.log(`Quadrado do numero ${num_1} = ${num_1**2}\nQuadrado do numero  ${num_2} = ${num_2**2}\nQuadrado do numero  ${num_3} = ${num_3**2}`)         
+
+//troca de valores entre variaveis
+        let a = 10
+        let b = 20
+        let aux = a
+            a = b
+            b = aux
+
+//calculo de dias com base em meses
+        let diasMes = 30
+        let qtdMeses = Number(prompt("Digitar quantidade de meses"))
+        
+            console.log(`Quantidade de dias em ${qtdMeses} meses\n ${qtdMeses * diasMes} dias`)    
+
+
+   </script> 
+</body>
+</html>

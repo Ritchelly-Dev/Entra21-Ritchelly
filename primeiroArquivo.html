@@ -8,12 +8,31 @@
 <body>
     <script>
 
-/*19) Para doar sangue é necessário ter entre 18 e 67 anos. Faça um script que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. 
-Use o operador lógicos OU (||) */
+   /*Faça um script que receba como dados de entrada a altura e o sexo de uma pessoa 
+   (F – feminino ou M – masculino), utilizando a estrutura de seleção switch calcule
+    o peso ideal da pessoa com base nas fórmulas: 
+Homem: (72.7 * altura) - 58
+Mulher: (62.1 * altura) - 44.7
+Após isso apresente na tela o valor calculado arredondado para duas casas decimais.
+*/
 
-let idade = +(prompt("Digite sua idade"));
+let altura = Number(prompt('Digite a altura Exemplo: 1.70'))
+let peso = Number(prompt('Digite o peso Exemplo: 90'))
+let imc = peso/(altura*altura)
 
-        if (idade > 18 ||  )
+if (imc > 30){
+    console.log(`IMC: ${imc}, pessoa considerada obesa`)
+}
+else if (imc < 30 && imc >= 25){
+    console.log(`IMC: ${imc}, pessoa considerada acima do peso`)
+} 
+else if(imc < 25 && imc >= 18,5){
+    console.log(`IMC: ${imc}, pessoa considerada peso normal`)
+}
+else{
+    console.log(`IMC: ${imc}, pessoa considerada abaixo do peso`)
+}
+console.log("Fim do programa")
 
     </script>
     
