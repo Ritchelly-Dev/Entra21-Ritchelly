@@ -99,14 +99,17 @@ let i = 0
 
 7) Faça um programa que receba um número N e mostre na tela todos os números ímpares de 0
 até N. (Faça o teste de mesa)
-let i = 0
-        while (i < 20) {   
-        i++          
-       
-        if(i % 2 != 0){
-
-            console.log (i)
+    
+        let j = 0, msg = "";
+while (j <= 10) {
+    if (j % 2 != 0) {
+        if (j === 9){
+            msg += j + ". ";
+        }else{
+            msg += j + ", ";
+        }
     }
+    j++;
 }
 
 
@@ -138,17 +141,20 @@ for (let i = 0; i <= 10; i++) {
 
 
 10) Elabore um  algoritmo que receba 10 números diferentes e mostre quantos são pares e quantos são ímpares.
-Entrada:                 Saída:
-1                        Pares: 4
-9                        Ímpares: 6
-2
-3
-13
-2
-92
-7
-11
-14
+let par = 0
+let impar = 0
+
+for (let i = 0; i < 10; i++) {
+    num = Number(prompt("Digite um numero"))  
+            if (num % 2 === 0){
+                par++
+                
+            }      
+            else{
+            impar++
+              
+            }}
+            console.log(`Impar ${impar}\n Par ${par}`)
 
 
 11) Faça um script que receba valores inteiros e mostre na tela quantos desses valores recebidos estão no intervalo

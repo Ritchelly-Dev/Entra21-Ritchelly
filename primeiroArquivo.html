@@ -8,22 +8,28 @@
 <body>
     <script>
 
-/*Crie um algoritmo que peça ao usuário um número e mostre na tela a tabuada (1 à 10) desse número.
+/*Elabore um  algoritmo que receba 10 números diferentes e mostre quantos são pares e quantos são ímpares.
 Entrada: */
 
 //let soma = 0 // Variável acumuladora
 
-let soma = 0
+let par = 0
+let impar = 0
 
 for (let i = 0; i <= 10; i++) {
     num = Number(prompt("Digite um numero"))  
-            if (num < 0) {
-                soma++
+            if (num % 2 === 0){
+                par++
+                
             }      
+            else{
+            impar++
+              
+            }}
+            console.log(`Impar ${impar}\n Par ${par}`)
 
-            console.log(`${soma}`)
-        }
-        
+
+
   
 
     </script>
