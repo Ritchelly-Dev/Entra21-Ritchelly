@@ -19,6 +19,22 @@ for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
 2) Escreva um programa que leia 5 numeros e os armazene em um vetor. Mostre o vetor, o 
 maior elemento e a posição que ele se encontra.
 
+let vetor = []
+//let pares = 0
+let maiorV = 0
+for (let i = 0; i < 5; i++){
+
+        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+}
+
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
+
+    if (vetor[i] > maiorV ) {
+      maiorV = vetor[i];
+   }
+} 
+console.log(maiorV)
+
 3) Faça um programa que receba do usuario um vetor com 5 posições. Em seguida, mostre
 o maior e o menor elemento do vetor.
 
