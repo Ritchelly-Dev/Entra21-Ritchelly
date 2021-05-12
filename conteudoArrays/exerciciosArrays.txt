@@ -1,5 +1,21 @@
 1) Leia um vetor de 10 posicões. Calcule e escreva quantos valores pares ele possui.
 
+let vetor = []
+let pares = 0
+
+for (let i = 0; i < 10; i++){
+
+        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+}
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
+            if(vetor[i] % 2 === 0) {
+            console.log(vetor[i])
+            pares++
+
+            }
+        }       
+     console.log(`O vetor possui ${pares} valores pares`)
+
 2) Escreva um programa que leia 5 numeros e os armazene em um vetor. Mostre o vetor, o 
 maior elemento e a posição que ele se encontra.
 
