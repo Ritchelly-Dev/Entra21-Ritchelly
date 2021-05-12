@@ -7,13 +7,13 @@ let i = 0
            i++
         }
 
-let i = 0
+let j = 0
         do {
             console.log("Olá Mundo")
-            i++
+            j++
         } while (i < 10)
 
- for (let i = 0; i < 10; i++) {
+ for (let k = 0; k < 10; k++) {
             console.log("Olá Mundo")
         }       
 
