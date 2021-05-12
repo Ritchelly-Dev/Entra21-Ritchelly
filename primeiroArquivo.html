@@ -8,26 +8,30 @@
 <body>
     <script>
 
-/*Elabore um  algoritmo que receba 10 números diferentes e mostre quantos são pares e quantos são ímpares.
-Entrada: */
+/*Construa um programa que leia vários valores númericos enquanto um valor 
+negativo não for digitado. Após isso,
+mostre a média aritmética dos valores recebidos. */
 
 //let soma = 0 // Variável acumuladora
 
-let par = 0
-let impar = 0
 
-for (let i = 0; i <= 10; i++) {
+let soma = 0
+let contador = 0
+
+for (let i = 0; i > 0; i++) {
     num = Number(prompt("Digite um numero"))  
-            if (num % 2 === 0){
-                par++
-                
+            if (num < 0){
+                break               
             }      
             else{
-            impar++
-              
-            }}
-            console.log(`Impar ${impar}\n Par ${par}`)
 
+                soma += num
+                contador++
+            }
+            }
+
+                                                                                                                                                                                                                                                                                        let media = soma / contador
+            console.log(`Média: ${media}`)
 
 
   
