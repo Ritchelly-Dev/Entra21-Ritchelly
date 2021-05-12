@@ -38,6 +38,12 @@ console.log(maiorV)
 3) Faça um programa que receba do usuario um vetor com 5 posições. Em seguida, mostre
 o maior e o menor elemento do vetor.
 
+
+
+
+
+
+
 4) Ler um vetor de 5 elementos. Crie um segundo vetor, com todos os elementos na ordem 
 inversa, ou seja, o último elemento passará a ser o primeiro, o penúltimo será o segundo 
 e assim por diante. Mostre os dois vetores. 

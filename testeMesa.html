@@ -13,6 +13,8 @@ maior elemento e a posição que ele se encontra.*/
 let vetor = []
 //let pares = 0
 let maiorV = 0
+let menorV = 0
+
 for (let i = 0; i < 5; i++){
 
         vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
@@ -23,8 +25,11 @@ for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
     if (vetor[i] > maiorV ) {
       maiorV = vetor[i];
    }
+   if (vetor[i] < menorV){
+       menorV = vetor[i]
+   }
 } 
-console.log(maiorV)
+console.log(maiorV , menorV)
 
 
 
