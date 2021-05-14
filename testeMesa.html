@@ -7,31 +7,57 @@
 </head>
 <body>
     <script>
-/*Escreva um programa que leia 5 numeros e os armazene em um vetor. Mostre o vetor, o 
-maior elemento e a posição que ele se encontra.*/
+/*4. Leia duas matrizes 3 x 3 e escreva uma terceira com os maiores valores de cada posiçãp
+das matrizes lidas.
+Entrada:          Saída:
+1 2 3             1 3 3
+4 5 6             5 5 6
+7 8 9             7 9 9
 
-let vetor = []
-//let pares = 0
-let maiorV = 0
-let menorV = 0
-
-for (let i = 0; i < 5; i++){
-
-        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
-}
-
-for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
-
-    if (vetor[i] > maiorV ) {
-      maiorV = vetor[i];
-   }
-   if (vetor[i] < menorV){
-       menorV = vetor[i]
-   }
-} 
-console.log(maiorV , menorV)
+0 3 2
+5 4 5
+6 9 8
+*/
 
 
+  let matriz = []
+  let matriz2 = []
+           
+            for (let linha = 0; linha < 3; linha++) {
+                matriz[linha] = []
+                for (let coluna = 0; coluna < 3; coluna++) {
+                    matriz[linha][coluna] = +prompt("Digite um número")                   
+                }      
+            }
+
+            for (let linha = 0; linha < 3; linha++) {
+                matriz2[linha] = []
+                for (let coluna = 0; coluna < 3; coluna++) {
+                    matriz2[linha][coluna] = +prompt("Digite um número")                   
+                }             
+            }     
+                
+            let matriz3 = []
+            for (let linha = 0; linha < 3; linha++) {
+                matriz3[linha] = []
+                for (let coluna = 0; coluna < 3; coluna++) {
+                    if (matriz[linha][coluna] > matriz2[linha][coluna]) {
+                        matriz3[linha][coluna] = matriz[linha][coluna]
+                    } else {
+                        matriz3[linha][coluna] = matriz2[linha][coluna]
+                    }
+                }
+            }
+
+            let mostrandoMatriz = ""
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    mostrandoMatriz += matriz3[i][j] + "\t"
+                }
+                mostrandoMatriz += "\n"
+            }
+            console.log(mostrandoMatriz)
+                   
 
     </script>
 </body>
