@@ -19,21 +19,37 @@ let maiorQue10 = 0
 2. Declare uma matriz 5 x 5. Preencha com 1 a diagonal principal e com 0 os demais
 elementos (Matriz Identtidade). Escreva ao final a matriz obtida.
 Saída:
-1 0 0 0 0
-0 1 0 0 0
-0 0 1 0 0
-0 0 0 1 0
-0 0 0 0 1
+let matriz = []
+    //let matriz2 = []
+           
+            for (let linha = 0; linha < 5; linha++) {
+                matriz[linha] = []
+                for (let coluna = 0; coluna < 5; coluna++) {
+                    matriz[linha][coluna] = +prompt("Digite um número")                   
+                }      
+            }
+            //diagonal principal
 
-let matriz = [
-    [1 ,0 ,0 ,0, 0],
-    [0, 1, 0, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 1]
-    ]
+            let dg = 0
+            for (let linha = 0; linha < 5; linha++) {
+                for (let coluna = 0; coluna < 5; coluna++) {
 
-console.log(matriz)
+                    if(linha == coluna){
+                      dg = dg += matriz[linha][coluna]
+                    }
+                                      
+                }      
+            }
+            let mostrandoMatriz = ""
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    mostrandoMatriz += matriz[i][j] + "\t"
+                }
+                mostrandoMatriz += "\n"
+            }
+            console.log(mostrandoMatriz)
+            console.log(dg)
+
 
 3. Leia uma matriz 3 x 3. Leia tambem um valor X. O programa devera fazer uma busca
 desse valor na matriz e, ao final, escrever a localização (linha e coluna) ou uma mensa-
