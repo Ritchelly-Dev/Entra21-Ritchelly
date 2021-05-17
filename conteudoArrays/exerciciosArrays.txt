@@ -162,6 +162,25 @@ console.log(`Vetor1: ${vetor} \n Vetor2: ${vetorD}`)
 8) Crie um programa que leia 6 valores inteiros pares (GARANTA QUE ELES SEJAM PARES) e, em
 seguida, mostre na tela os valores lidos na ordem inversa.
 
+let vetor = []
+let flag
+let valorDigitado
+
+for (let i = 0; i < 6; i++){
+    vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+    if (vetor[i] % 2 != 0){
+     i--
+    continue
+    }
+    else {
+        valorDigitado = vetor[i]
+    }
+    }
+
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
+}
+    //vetor.reverse()
+console.log(`Vetor: ${vetor.reverse()}`)
 
 
 
