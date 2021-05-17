@@ -7,73 +7,51 @@
 </head>
 <body>
     <script>
-/*Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão acima da
-diagonal principal.
+/*6) Faça um programa que possua um vetor denominado A que armazene 6 numeros inteiros.
+O programa deve executar os seguintes passos:
+
+(a) Atribua os seguintes valores a esse vetor: 1, 0, 5, -2, -5, 7.
+(b) Armazene em uma variavel a soma entre os valores das posições A[0], 
+A[1] e A[5] do vetor e mostre na tela esta soma.
+(c) Modifique o vetor na posição 4, atribuindo a esta posição o valor 100.
+(d) Mostre na tela cada valor do vetor A, um em cada linha. 
 */
 
+let A = [1,0,5,-2,-5,7]
+let somaA = A[0] + A[1] + A[5]
 
-  let matriz = []
-    //let matriz2 = []
-           
-            for (let linha = 0; linha < 5; linha++) {
-                matriz[linha] = []
-                for (let coluna = 0; coluna < 5; coluna++) {
-                    matriz[linha][coluna] = +prompt("Digite um número")                   
-                }      
-            }
-            //diagonal principal
+console.log (somaA)
 
-            let dg = 0
-            for (let linha = 0; linha < 5; linha++) {
-                for (let coluna = 0; coluna < 5; coluna++) {
-
-                    if(linha == coluna){
-                      dg = dg += matriz[linha][coluna]
-                    }
-                                      
-                }      
-            }
-            let mostrandoMatriz = ""
-            for (let i = 0; i < 5; i++) {
-                for (let j = 0; j < 5; j++) {
-                    mostrandoMatriz += matriz[i][j] + "\t"
-                }
-                mostrandoMatriz += "\n"
-            }
-            console.log(mostrandoMatriz)
-            console.log(dg)
+A[4] = 100
+console.log (A.join("\n"))
 
 
 
+let vetor = []
+let localizador
+let flag
+for (let i = 0; i < 5; i++){
+
+        vetor[i] = prompt(`Digite o ${i + 1}° nome`)      
+}
+console.log(vetor.join("\n"))
+
+localizador = prompt( "Digite um nome para procura-lo")
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
+    if( localizador === vetor[i]){
+        flag = true
+        break
+    }
+}
+    if(flag){
+        console.log("Achei o nome")
+    }
+    else{
+        console.log("Não achei")
+
+}
 
 
-            for (let linha = 0; linha < 3; linha++) {
-                matriz2[linha] = []
-                for (let coluna = 0; coluna < 3; coluna++) {
-                    matriz2[linha][coluna] = +prompt("Digite um número")                   
-                }             
-            }     
-                
-            let matriz3 = []
-            for (let linha = 0; linha < 3; linha++) {
-                matriz3[linha] = []
-                for (let coluna = 0; coluna < 3; coluna++) {
-                    if (matriz[linha][coluna] > matriz2[linha][coluna]) {
-                        matriz3[linha][coluna] = matriz[linha][coluna]
-                    } else {
-                        matriz3[linha][coluna] = matriz2[linha][coluna]
-                    }
-                }
-            }
-
-            let mostrandoMatriz = ""
-            for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < 3; j++) {
-                    mostrandoMatriz += matriz3[i][j] + "\t"
-                }
-                mostrandoMatriz += "\n"
-            }
-            console.log(mostrandoMatriz)
                    
 
     </script>

@@ -20,8 +20,8 @@ for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
 maior elemento e a posição que ele se encontra.
 
 let vetor = []
-//let pares = 0
 let maiorV = 0
+let posi = 0
 for (let i = 0; i < 5; i++){
 
         vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
@@ -31,14 +31,41 @@ for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
 
     if (vetor[i] > maiorV ) {
       maiorV = vetor[i];
-   }
+      posi = vetor.indexOf(maiorV);
+    }
+   
+   
 } 
-console.log(maiorV)
+console.log(vetor)
+console.log(maiorV , posi)
 
 3) Faça um programa que receba do usuario um vetor com 5 posições. Em seguida, mostre
 o maior e o menor elemento do vetor.
 
+let vetor = []
+let menorV
+let maiorV = 0
 
+for (let i = 0; i < 5; i++){
+
+        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+}
+
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
+
+    if(i === 0){
+        menorV = vetor[i]
+        maiorV = vetor[i]
+    }
+    else if (vetor[i] > maiorV ) {
+      maiorV = vetor[i];
+    }
+    if (vetor[i] < menorV  ) {
+        menorV = vetor[i]
+    }
+
+} 
+console.log(`O menor valor é: ${menorV}\n O maior valor é: ${maiorV}`)
 
 
 
@@ -48,32 +75,50 @@ o maior e o menor elemento do vetor.
 inversa, ou seja, o último elemento passará a ser o primeiro, o penúltimo será o segundo 
 e assim por diante. Mostre os dois vetores. 
 
-5) Ler um vetor com 5 nomes de pessoas, após pedir que o usuário digite um nome qualquer 
-de pessoa. Escrever a mensagem “ACHEI”, se o nome estiver armazenado no vetor de nomes ou 
-“NÃO ACHEI” caso contrário. 
+let vetor = []
+
+for (let i = 0; i < 5; i++){
+
+        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+}
+
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
+    }
+    //vetor.reverse()
+console.log(`Vetor1: ${vetor}\nVetor2: ${vetor.reverse()}`)
 
 
 
-
-1) Leia um vetor de 10 posições. Calcule e escreva quantos valores pares ele possui.
-
-
-2) Escreva um programa que leia 5 numeros e os armazene em um vetor. Mostre o vetor, o 
-maior elemento e a posição que ele se encontra.
-
-
-3) Faça um programa que receba do usuario um vetor com 5 posições. Em seguida, mostre
-o maior e o menor elemento do vetor.
-
-
-4) Ler um vetor de 5 elementos. Crie um segundo vetor, com todos os elementos na ordem 
-inversa, ou seja, o último elemento passará a ser o primeiro, o penúltimo será o segundo 
-e assim por diante. Mostre os dois vetores. 
 
 
 5) Ler um vetor com 5 nomes de pessoas, após pedir que o usuário digite um nome qualquer 
 de pessoa. Escrever a mensagem “ACHEI”, se o nome estiver armazenado no vetor de nomes ou 
 “NÃO ACHEI” caso contrário. 
+
+let vetor = []
+let localizador
+let flag
+for (let i = 0; i < 5; i++){
+
+        vetor[i] = prompt(`Digite o ${i + 1}° nome`)      
+}
+console.log(vetor.join("\n"))
+
+localizador = prompt( "Digite um nome para procura-lo")
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
+    if( localizador === vetor[i]){
+        flag = true
+        break
+    }
+}
+    if(flag){
+        console.log("Achei o nome")
+    }
+    else{
+        console.log("Não achei")
+
+}
+
 
 
 6) Faça um programa que possua um vetor denominado A que armazene 6 numeros inteiros.
@@ -84,6 +129,14 @@ O programa deve executar os seguintes passos:
 A[1] e A[5] do vetor e mostre na tela esta soma.
 (c) Modifique o vetor na posição 4, atribuindo a esta posição o valor 100.
 (d) Mostre na tela cada valor do vetor A, um em cada linha.
+
+let A = [1,0,5,-2,-5,7]
+let somaA = A[0] + A[1] + A[5]
+
+console.log (somaA)
+
+A[4] = 100
+console.log (A.join("\n"))
 
 
 7) Ler um conjunto de numeros, armazenando-os em vetor e calcular o quadrado dos

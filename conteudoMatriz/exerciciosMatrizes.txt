@@ -127,6 +127,13 @@ diagonal principal.
 
 
 
+
+
+
+
+
+
+
 6. Faça um script que leia o nome e as notas de 3 alunos e armazene essas informações em
 uma matriz no seguinte formato:
 João   10   9   8

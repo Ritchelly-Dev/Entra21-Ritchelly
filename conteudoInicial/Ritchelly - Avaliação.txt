@@ -81,17 +81,3 @@ switch (sexo){
 let altura = Number(prompt('Digite a altura Exemplo: 1.70'))
 let peso = Number(prompt('Digite o peso Exemplo: 90'))
 let imc = peso/(altura*altura)
-
-if (imc > 30){
-    console.log(`IMC: ${imc}, pessoa considerada obesa`)
-}
-else if (imc < 30 && imc >= 25){
-    console.log(`IMC: ${imc}, pessoa considerada acima do peso`)
-} 
-else if(imc < 25 && imc >= 18,5){
-    console.log(`IMC: ${imc}, pessoa considerada peso normal`)
-}
-else{
-    console.log(`IMC: ${imc}, pessoa considerada abaixo do peso`)
-}
-console.log("Fim do programa")
