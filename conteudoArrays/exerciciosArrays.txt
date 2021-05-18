@@ -213,7 +213,6 @@ while(true){
 }
 soma = vetor[x] + vetor[y]
 console.log(soma)
-
 console.log(vetor)
 
 
