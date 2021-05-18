@@ -163,7 +163,6 @@ console.log(`Vetor1: ${vetor} \n Vetor2: ${vetorD}`)
 seguida, mostre na tela os valores lidos na ordem inversa.
 
 let vetor = []
-let flag
 let valorDigitado
 
 for (let i = 0; i < 6; i++){
@@ -189,6 +188,37 @@ valores X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu
 deverá escrever a soma dos valores encontrados nas respectivas posições X e Y. Se o usuário
 digitar valores inválidas para X ou Y mostre uma mensagem de erro e peça novos valores até 
 que ambos os valores sejam válidos.
+let vetor = []
+let x = 0
+let y = 0
+let soma = 0
+//let posi = 0
+
+
+for (let i = 0; i < 8; i++){
+
+        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+}
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
+}
+while(true){
+    x = +prompt("insira um valor")
+    if(x < 8 && x >= 0) break
+    else(alert("insira um valor valido"))
+}
+while(true){
+    y = +prompt("insira um valor")
+    if(y < 8 && y >= 0) break
+    else(alert("insira um valor valido"))
+}
+soma = vetor[x] + vetor[y]
+console.log(soma)
+
+console.log(vetor)
+
+
+
+
 
 
 10) Faça um programa que leia 10 números e preencha um vetor, calcule e
