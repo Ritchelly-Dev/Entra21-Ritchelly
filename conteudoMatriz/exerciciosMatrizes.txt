@@ -84,43 +84,62 @@ let matriz = []
 
 4. Leia duas matrizes 3 x 3 e escreva uma terceira com os maiores valores de cada posiçãp
 das matrizes lidas.
-  let matriz = []
-  let matriz2 = []
-           
-            for (let linha = 0; linha < 3; linha++) {
-                matriz[linha] = []
-                for (let coluna = 0; coluna < 3; coluna++) {
-                    matriz[linha][coluna] = +prompt("Digite um número")                   
-                }      
-            }
+  let matriz1 = [],
+        matriz2 = [],
+        matriz3 = []
 
-            for (let linha = 0; linha < 3; linha++) {
-                matriz2[linha] = []
-                for (let coluna = 0; coluna < 3; coluna++) {
-                    matriz2[linha][coluna] = +prompt("Digite um número")                   
-                }             
-            }     
-                
-            let matriz3 = []
-            for (let linha = 0; linha < 3; linha++) {
-                matriz3[linha] = []
-                for (let coluna = 0; coluna < 3; coluna++) {
-                    if (matriz[linha][coluna] > matriz2[linha][coluna]) {
-                        matriz3[linha][coluna] = matriz[linha][coluna]
-                    } else {
-                        matriz3[linha][coluna] = matriz2[linha][coluna]
-                    }
-                }
-            }
+    for (let i = 0; i < 3; i++) {
+        matriz1[i] = []
+        for (let j = 0; j < 3; j++) {
+            matriz1[i][j] = +prompt(`Digite o valor da ${i + 1}a linha na ${j + 1} coluna da primeira matriz`)
+        }                
+    }
 
-            let mostrandoMatriz = ""
-            for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < 3; j++) {
-                    mostrandoMatriz += matriz3[i][j] + "\t"
-                }
-                mostrandoMatriz += "\n"
+    for (let i = 0; i < 3; i++) {
+        matriz2[i] = []
+        matriz3[i] = []
+        for (let j = 0; j < 3; j++) {
+            matriz2[i][j] = +prompt(`Digite o valor da ${i + 1}a linha na ${j + 1} coluna da segunda matriz`)
+
+            if (matriz1[i][j] > matriz2[i][j]) {
+                matriz3[i][j] = matriz1[i][j]
+            } else {    
+                matriz3[i][j] = matriz2[i][j]
             }
-            console.log(mostrandoMatriz)
+        }                
+    }                                   
+
+    let mostrarMatriz = ""
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            mostrarMatriz += matriz1[i][j] + "\t"
+        }
+        mostrarMatriz += "\n"
+    }
+
+    console.log(mostrarMatriz)
+
+    mostrarMatriz = ""
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            mostrarMatriz += matriz2[i][j] + "\t"
+        }
+        mostrarMatriz += "\n"
+    }
+
+    console.log(mostrarMatriz)
+    
+    
+    mostrarMatriz = ""
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            mostrarMatriz += matriz3[i][j] + "\t"
+        }
+        mostrarMatriz += "\n"
+    }
+
+    console.log(mostrarMatriz)
+    
 
 5. Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão acima da
 diagonal principal.
