@@ -7,30 +7,28 @@
 </head>
 <body>
     <script>
-        "use strict"
-/*7) Crie uma função que receba uma array e retorne o primeiro e o último elemento desse array 
-como um novo.
-O array pode ter qualquer tamanho.
+
+        //if (numero === parseInt(numero) && !isNaN(numero)) console.log("Inteiro")
+/*Faça uma função que recebe, por parâmetro, um valor inteiro e positivo e 
+retorna o número de divisores 
+desse valor.
+
 */
-   
 
-let vetor = []
+let num = +prompt("Digite um numero")
 
-for (let i = 0; i < 5; i++){
-        vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+function divisores(num) {
+    let quantidade = 0
+for(let i = 1; i <= num ; i++){
+
+    if(num % i === 0){
+        quantidade++
+    }
+}
+return quantidade
 }
 
-for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor ; i++){
-
-    }
-
-    console.log(vetor[0] , vetor[vetor.length - 1])
-
-  
-
-
-
-
+console.log(divisores(num))
 
 
     </script>

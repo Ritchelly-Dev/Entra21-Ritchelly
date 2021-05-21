@@ -120,6 +120,11 @@ console.log(pesoIdeal(altura,sexo))
 7) Crie uma função que receba uma array e retorne o primeiro e o último elemento desse array como um novo.
 O array pode ter qualquer tamanho.
 
+let vetor = [1,2,3,4,5]
+
+let minimoMax = vetor => [vetor[0] , vetor[vetor.length - 1]]
+    
+  console.log (minimoMax(vetor))
 
 
 
@@ -129,30 +134,125 @@ especificada no parâmetro.
 Exemplo:
 mostraSimbolo(10) // ##########
 
+let num = 10
+function mostraAcesso(num) {
+for (i = 0; i < num;i++){
+    if(i < 10){
+        console.log("#")
+    }
+}
+}
+
+console.log(mostraAcesso(num)) 
+
+
+
 
 9) Escreva uma função que receba dois parâmetros. O primeiro é o elemento que repetirá, enquanto o segundo é
 o número de vezes que haverá a repetição. Um array deve ser retornado
 Exemplo:
 repetirElemento("oi", 3) // ["oi", "oi", "oi"]
 
+let num = 3
+let vetor = []
+function repetirElem(vetor, num){
+for (i = 0; i < num;i++){
+    vetor[i] = "oi"
+}
+console.log([vetor.join(", ")])
+}
+console.log(repetirElem(vetor, num))
+
+
+
 
 10) Escreva um script que receba o ano em que você nasceu e calcule a sua idade. Utilize uma função que retorna
 idade.
+
+const ano = new Date().getFullYear()
+let data = +prompt("Digite o ano do seu nascimento!", 2003)
+
+function calcularidade(ano, data){
+    return ano - data
+}
+console.log(calcularidade(ano, data))
 
 
 11) Faça uma função que receba um array de 5 elementos. Modifique o vetor[1] = 10 e vetor[2] = 30 e retorne o vetor modificado. 
 Ao final mostre na tela o vetor original e o vetor modificado.
 
+let vetor1 = [1,2,3,4,5]
+
+function vetorModificado(vetor) {     
+    vetor[1] = 10
+    vetor[2] = 30  
+    return vetor
+}
+console.log(vetor1)
+let vetor2 = vetorModificado(vetor1)
+console.log(vetor2)
+
+
 
 12) Faça um procedimento que lê 50 valores inteiros e retorna o maior e o menor deles. 
 Utilize a função Math.random() para gerar valores aleatórios entre 1-1000.
 
+function cadastraVetor() {
+    let vetor = []
+    for (let i = 0; i < 50; i++) {
+        vetor[i] = Math.floor(Math.random() * 1000) + 1
+    }
+
+    return vetor
+}
+
+function maiorMenor(vetor){
+    let maior = vetor[0]
+    let menor = vetor[0]
+    for(i = 0; i < vetor.length; i++) {
+        if (vetor[i] > maior) maior = vetor[i]
+        if (vetor[i] < menor) menor = vetor[i]
+    }
+
+    return [menor, maior]
+}
+
+let vetor = cadastraVetor()
+let [menor, maior] = maiorMenor()
+console.log(`Menor: ${menor}\nMaior: ${maior}`)
+
+
+
 
 13) Faça uma função que recebe a idade de uma pessoa em anos (365 dias), meses e dias e retorna essa idade expressa em dias.
+
+let idade = +prompt("Digite sua idade")
+
+function converteDias(idade) {
+   return (idade * 12 * 30)
+}
+
+console.log(converteDias(idade))
 
 
 14) Faça uma função que recebe, por parâmetro, um valor inteiro e positivo e retorna o número de divisores 
 desse valor.
+
+let num = +prompt("Digite um numero")
+
+function divisores(num) {
+    let quantidade = 0
+for(let i = 1; i <= num ; i++){
+
+    if(num % i === 0){
+        quantidade++
+    }
+}
+return quantidade
+}
+
+console.log(divisores(num))
+
 
 
 15) Faça uma função que receba um valor inteiro e positivo e calcule o seu fatorial.
