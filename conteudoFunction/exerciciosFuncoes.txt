@@ -257,6 +257,19 @@ console.log(divisores(num))
 
 15) Faça uma função que receba um valor inteiro e positivo e calcule o seu fatorial.
 
+let fator = +prompt("Digite um numero")
+
+
+function fatorial(fator) {
+    let resultado = fator
+    for(let i = 1; i < fator; i++){
+    resultado *= i
+}
+return resultado
+}
+
+console.log(fatorial(fator))
+
 
 16) Faça uma função que verifique se um valor é perfeito ou não. Um valor é dito perfeito quando ele é igual a 
 soma dos seus divisores excetuando ele próprio. (Ex: 6 é perfeito, 6 = 1 + 2 + 3, que são seus divisores). 

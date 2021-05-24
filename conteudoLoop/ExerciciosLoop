@@ -100,17 +100,15 @@ let i = 0
 7) Faça um programa que receba um número N e mostre na tela todos os números ímpares de 0
 até N. (Faça o teste de mesa)
     
-        let j = 0, msg = "";
-while (j <= 10) {
-    if (j % 2 != 0) {
-        if (j === 9){
-            msg += j + ". ";
-        }else{
-            msg += j + ", ";
-        }
-    }
-    j++;
+       let resultado = ""
+let numero = +prompt("Digite um número:")
+
+for (let i = 1; i <= numero; i += 2) {
+    resultado += i
+    if (i < numero - 1) resultado += ", "
 }
+
+alert(resultado)
 
 
 8) Crie um algoritmo que peça ao usuário um número e mostre na tela a tabuada (1 à 10) desse número.
