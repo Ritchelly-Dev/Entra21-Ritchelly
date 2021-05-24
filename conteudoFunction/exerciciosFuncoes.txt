@@ -65,30 +65,20 @@ a média por parâmetro retorne o conceito da média conforme a tabela abaixo:
 | de 7.0 à 8.9   |     B     |
 | de 9.0 à 10.0  |     A     |
 +----------------+-----------+
-
-let a = +prompt("Digite a 1° nota")
-let b = +prompt("Digite a 2° nota")
-let c = +prompt("Digite a 3° nota")
-
-function mediaNotas(a,b,c) {
-return  (a+b+c)/3
-} 
-function conceitoM(mediaNotas){
-    if (media < 4.9){
-        return "Conceito D"
-    }
-    else if (media < 6.9){
-        return "Conceito C"
-    }
-    else if (media < 8.9){  
-        return "Conceito B"
-    }
-        return "Conceito A"
-}
-
-let media = mediaNotas(a, b, c)
-console.log(media)
-console.log(conceitoM(media))
+function obtemConceito(media) {
+                let conceito
+                if (media < 5) {
+                    conceito = "D"
+                } else if (media < 7) {
+                    conceito = "C"
+                } else if (media < 9) {
+                    conceito = "B"
+                } else {
+                    conceito = "A"
+                }
+                return conceito 
+            }            
+        }
 
 
 6) Faça uma função que recebe, por parâmetro, a altura e o sexo de uma pessoa e 
@@ -134,16 +124,15 @@ especificada no parâmetro.
 Exemplo:
 mostraSimbolo(10) // ##########
 
-let num = 10
-function mostraAcesso(num) {
-for (i = 0; i < num;i++){
-    if(i < 10){
-        console.log("#")
+function tags(N) {
+        let S = ""
+        for(let i = 0; i < N; i++){
+            S += "#"
+        }
+        return S
     }
-}
-}
-
-console.log(mostraAcesso(num)) 
+    let n1 = +prompt("insira um número")
+    console.log(tags(n1))
 
 
 
@@ -171,11 +160,8 @@ idade.
 
 const ano = new Date().getFullYear()
 let data = +prompt("Digite o ano do seu nascimento!", 2003)
-
-function calcularidade(ano, data){
-    return ano - data
-}
-console.log(calcularidade(ano, data))
+let calcularidade = ano => ano - data
+console.log(calcularidade(ano))
 
 
 11) Faça uma função que receba um array de 5 elementos. Modifique o vetor[1] = 10 e vetor[2] = 30 e retorne o vetor modificado. 
@@ -197,30 +183,30 @@ console.log(vetor2)
 12) Faça um procedimento que lê 50 valores inteiros e retorna o maior e o menor deles. 
 Utilize a função Math.random() para gerar valores aleatórios entre 1-1000.
 
-function cadastraVetor() {
-    let vetor = []
-    for (let i = 0; i < 50; i++) {
-        vetor[i] = Math.floor(Math.random() * 1000) + 1
-    }
+function maiorMenor(numeros) {
+                let menor = numeros[0], maior = numeros[0]
+                for (let numero of numeros) {
+                    if (numero > maior) maior = numero
+                    if (numero < menor) menor = numero
+                }
 
-    return vetor
-}
+                return [maior, menor]
+            }            
 
-function maiorMenor(vetor){
-    let maior = vetor[0]
-    let menor = vetor[0]
-    for(i = 0; i < vetor.length; i++) {
-        if (vetor[i] > maior) maior = vetor[i]
-        if (vetor[i] < menor) menor = vetor[i]
-    }
+            function cadastraNumeros() {
+                let numeros = []
+                for (let i = 0; i < 50; i++) {
+                    numeros[i] = Math.floor(Math.random() * 1000) + 1
+                }
 
-    return [menor, maior]
-}
+                return numeros
+            }
 
-let vetor = cadastraVetor()
-let [menor, maior] = maiorMenor()
-console.log(`Menor: ${menor}\nMaior: ${maior}`)
+            let numeros = cadastraNumeros()
+            let [maior, menor] = maiorMenor(numeros)
 
+            console.log(numeros)
+            console.log(`Maior: ${maior}\nMenor: ${menor}`)
 
 
 
