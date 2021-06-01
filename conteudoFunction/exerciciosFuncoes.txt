@@ -205,7 +205,7 @@ function maiorMenor(numeros) {
             let numeros = cadastraNumeros()
             let [maior, menor] = maiorMenor(numeros)
 
-            console.log(numeros)
+            console.log(numeros.sort())
             console.log(`Maior: ${maior}\nMenor: ${menor}`)
 
 
