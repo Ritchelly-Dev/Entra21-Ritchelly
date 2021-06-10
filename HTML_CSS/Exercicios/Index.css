@@ -2,3 +2,37 @@
     text-align: center;
     
 }
+hr {
+    border: 2px solid black;
+}
+
+.texto_verde{
+    color: green;
+    text-align: justify;
+
+}  
+
+.texto_vermelho{
+    color: red;
+    text-align: justify;
+    margin-bottom: 0%;
+
+}   
+
+.texto_azul{
+    color: blue;
+    text-align: justify;
+    margin-top: 0%;
+
+}   
+
+.titulo_4{
+    text-align: center;
+}
+
+.anjo{
+    text-align: center;
+}
+.Torre_Babel{
+text-align: center;
+}
