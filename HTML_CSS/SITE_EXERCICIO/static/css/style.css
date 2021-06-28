@@ -34,6 +34,9 @@ ul li {
   border: solid;
   }
 
+ .inicio {
+    display: none;
+}
   
  nav img{
     border-radius: 45%;
